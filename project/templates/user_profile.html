@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile</title>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='assets/css/user_profile.css')}}"
+    />
+  </head>
+  <body>
+    <div class="profile-container">
+      <div class="profile-header">
+        <h1>User Profile</h1>
+      </div>
+
+      <div class="profile-content">
+        <div class="profile-picture">
+          <img src="https://robohash.org/hicveldicta.png" alt="User Avatar" />
+        </div>
+
+        <div class="profile-details">
+          <h2>{{username}}</h2>
+          <p>Email: {{email}}</p>
+
+          <!-- Logout button -->
+          <button><a href="{{url_for('auth.logout')}}">Logout</a></button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
